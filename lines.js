@@ -9,12 +9,13 @@ function dothing(){
     else{
         dict[textIn.value] = [time,0];
     }
+    printthing();
 }
 
 function printthing(){
     totout = "";
     for(i in dict){
-        totout += String(dict[i])+"\n";
+        totout += i+";"+String(dict[i]) + "____";
     }
     out.textContent = totout;
 }
