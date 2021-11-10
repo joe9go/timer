@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<body>
+    <input type="text" id="the text">
+    <button type="button" id = "the button">add</button>
+    <button type="button" id = "complete">print out</button>
+    <p id = "out"></p>
+
+    <script src="lines.js"></script>
+</body>
