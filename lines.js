@@ -1,5 +1,5 @@
 var dict = {};
-var printout = false;
+var printout = true;
 
 function dothing(){
     today = new Date();
