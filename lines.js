@@ -11,13 +11,19 @@ function dothing(){
     }
     printthing();
 }
+function swapPrint(){
+    printout = !printout;
+    printthing();
+}
 
 function printthing(){
-    totout = "";
-    for(i in dict){
-        totout += i+";"+String(dict[i]) + "____";
+    if(printout){
+        totout = "";
+        for(i in dict){
+            totout += i+";"+String(dict[i]) + "____";
+        }
+        out.textContent = totout;
     }
-    out.textContent = totout;
 }
 
 textIn = document.getElementById("the text")
@@ -26,5 +32,14 @@ endbutton = document.getElementById("complete")
 out = document.getElementById("out")
 
 button.onclick = dothing;
-endbutton.onclick = printthing;
+endbutton.onclick = swapPrint;
 textIn.addEventListener('submit',dothing);
+
+document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    var code = event.code;
+    // Alert the key name and key code on keydown
+    if(name == "Enter"){
+        dothing();
+    }
+  }, false);
